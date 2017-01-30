@@ -15,7 +15,6 @@
 #' @export
 outlier <- function(input, superior = TRUE){
   boxp <- boxplot(input, plot=FALSE)
-
   output = NULL
   for (g in unique(boxp$group)){
     column_name = boxp$name[g]
@@ -27,6 +26,8 @@ outlier <- function(input, superior = TRUE){
     output = cbind(output,input[,column_name] %in% outliers)
   }
   output = data.frame(output)
-  colnames(output) = boxp$names
+  print(boxp$names[unique(boxp$group)])
+  colnames(output) = boxp$names[unique(boxp$group)]
+
   return(output)
 }
