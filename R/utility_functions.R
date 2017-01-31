@@ -60,5 +60,5 @@ outlier <- function(input, superior = TRUE, out_type = 'logical'){
         }
     }
 
-    return(output)
+    return(as.data.frame(output))
 }
