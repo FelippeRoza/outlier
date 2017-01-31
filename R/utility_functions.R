@@ -14,7 +14,7 @@
 #' @export
 
 rel_change <- function(x, xref){
-    return (x - xref)/abs(xref)
+    return ((x - xref)/abs(xref))
 }
 
 #' Outlier searching
