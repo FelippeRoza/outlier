@@ -4,15 +4,17 @@
 \alias{outlier}
 \title{Outlier searching}
 \usage{
-outlier(input, superior = TRUE)
+outlier(input, superior = TRUE, out_type = "logical")
 }
 \arguments{
 \item{input}{data frame}
 
 \item{superior}{if TRUE, returns only the superior outliers}
+
+\item{out_type}{'logical', 'absolute' or 'percentage'}
 }
 \value{
-Data frame
+Data frame, type defined by out_type parameter
 }
 \description{
 Returns a boolean data frame with the same dimensions of input dataframe
